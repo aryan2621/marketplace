@@ -1,39 +1,16 @@
-# Market Place
+# Marketplace
 
-A multi-service marketplace platform with APK extraction and client applications.
+Android app marketplace (AndroHub) with a public store, developer dashboard, reviewer queue, and APK metadata extraction.
 
 ## Services
 
-- **apk-extraction-service**: Node.js service for extracting APK metadata
-- **app-market-place**: Next.js client application 
-- **app-market-place-admin**: Admin dashboard
-- **app-market-place-master**: Master client application
+- `app-market-place` — public store (browse, search, download)
+- `app-market-place-admin` — developer dashboard (listings, submit for review)
+- `app-market-place-master` — reviewer dashboard (approve, reject, reports)
+- `apk-extraction-service` — extracts package name, permissions, and SDK versions from APKs
 
-## Quick Start
+## Stack
 
-### APK Extraction Service
-```bash
-cd apk-extraction-service
-npm install
-npm run dev
-```
+Next.js, Firebase, Node.js, Express.
 
-### Client Applications
-```bash
-cd app-market-place/client
-npm install
-npm run dev
-```
-
-Repeat for admin and master clients as needed.
-
-## Tech Stack
-
-- **Backend**: Node.js, Express
-- **Frontend**: Next.js, React, Tailwind CSS
-- **Database**: Firebase
-- **APK Processing**: adbkit-apkreader, adm-zip
-
-## Development
-
-Each service has its own package.json with detailed scripts. See individual service directories for specific setup instructions.
+Each service has its own `package.json`. See the service directories for setup.
